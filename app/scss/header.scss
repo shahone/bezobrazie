@@ -1,0 +1,466 @@
+.header{
+  // position: fixed;
+  position: relative;
+  // overflow: hidden;
+  z-index: 1;
+  padding-top: 20px;
+  top: 0;
+  left: 0;
+  right: 0;
+  width: 100%;
+  max-width: 1920px;
+  min-width: 280px;
+  height: 100%;
+  margin: auto;
+  // background: url(../images/main/bg2.jpg) center/cover no-repeat;
+  // background-color: #fff;
+  &__title-block{
+    width: fit-content;
+    margin: 0 auto;
+
+    // background-color: #f1f;
+
+  }
+  &__title{
+    // overflow: hidden;
+    // font-family:'Gilroy';
+    // font-family: 'Fredoka One', cursive;
+    // font-family: 'Jost', sans-serif;
+    // font-family: 'Poppins', sans-serif;
+    // font-family: 'Questrial', sans-serif;
+    // letter-spacing: 3px;
+    // font-family: 'Quicksand', sans-serif;
+    font-family: 'Righteous', cursive;
+    // font-family: 'Kumbh Sans', sans-serif;
+    // font-family:'AvantGarde', sans-serif;
+    font-weight: 700;
+    text-shadow: 1px 1px 5px  $title;
+    width: 980px;
+    height: 100vh;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    align-content: flex-start;
+    font-size: 110px;
+    text-align: center;
+    position: relative;
+    // mix-blend-mode: multiply;
+    // color: $black;
+    color: #fff;
+    @include maw(1340){
+      width: 715px;
+      font-size: 80px;
+    }
+    @include maw-md{
+      width: 100%;
+    }
+    @include maw-s{
+      font-size: 64px;
+    }
+    @include maw-xxs{
+      font-size: 53px;
+    }
+    @include maw-3xs{
+      font-size: 48px;
+    }
+    // &__title-left, &__title-right, &__subtitle {
+    //   mix-blend-mode: multiply;
+    //   color: #fff;
+    // }
+    &-left{
+      position: relative;
+      z-index: 2;
+      flex: 1 1 40%;
+
+      span {
+        opacity: 0;
+        transform: translateX(-30%);
+        animation: move 1.5s ease-in-out forwards;
+      }
+      span:nth-child(1) {
+        animation-delay: .1s;
+      } //G
+      span:nth-child(2) {
+        animation-delay: .2s;
+      } //e
+      span:nth-child(3) {
+        animation-delay: .3s;
+      } //r
+      span:nth-child(4) {
+        animation-delay: .4s;
+      } //m
+      span:nth-child(5) {
+        animation-delay: .5s;
+      } //a
+      span:nth-child(6) {
+        animation-delay: .6s;
+      } //n
+      @include maw-md {
+        flex-basis: 100%;
+      }
+    }
+
+    &-right{
+      position: relative;
+      z-index: 3;
+      flex: 1 1 40%;
+      span {
+        opacity: 0;
+        transform: translateX(-30%);
+        animation: move 1.5s ease-in-out forwards;
+      }
+      span:nth-child(1) {
+        animation-delay: .7s;
+        color: red;
+      } //P
+      span:nth-child(2) {
+        animation-delay: .8s;
+        color: red;
+      } //r
+      span:nth-child(3) {
+        animation-delay: .9s;
+        color: red;
+      } //o
+      span:nth-child(4) {
+        animation-delay: 1s;
+      } //k
+      span:nth-child(5) {
+        animation-delay: 1.1s;
+      } //o
+      span:nth-child(6) {
+        animation-delay: 1.2s;
+      } //p
+      span:nth-child(7) {
+        animation-delay: 1.3s;
+      } //'
+      span:nth-child(8) {
+        animation-delay: 1.4s;
+      } //y
+      span:nth-child(9) {
+        animation-delay: 1.5s;
+      } //e
+      span:nth-child(10) {
+        animation-delay: 1.6s;
+      } //v
+      @include maw-md {
+        flex-basis: 100%;
+      }
+    }
+
+  }
+
+  &__subtitle{
+    width: 100%;
+    max-height: 40px;
+    font-size: .3em;
+    text-align: center;
+    margin: 10px auto 0;
+    position: relative;
+    transform: translateY(50%) rotateX(-90deg);
+    opacity: 0;
+    // background: red;
+    animation: in 1s 3s forwards;
+    @include maw(1340){
+      height: 30px;
+    }
+    @include maw-md{
+      margin: 20px auto 0;
+
+    }
+    @include maw-s{
+      font-size: 0.4em;
+    }
+    &::after, &::before{
+      content: '';
+      position: absolute;
+      z-index: 1;
+      display: block;
+      top: 50%;
+      width: 0;
+      height: 3px;
+      box-shadow: 0 0 3px $title;
+      background-color: #fff;
+      border-radius: 2px;
+      animation: grow 1s 3s forwards;
+      @include maw(1340){
+        width: 160px;
+      }
+      @include maw-md{
+        display: none;
+      }
+    }
+    &::before{
+      left: 65%;
+    }
+    &::after{
+      right: 65%;
+    }
+
+    // .swiper-container {
+    //   &::after, &::before{
+    //     content: '';
+    //     position: absolute;
+    //     top: 60%;
+    //     width: 200px;
+    //     height: 3px;
+    //     box-shadow: 0 0 3px $title;
+    //     background-color: #fff;
+    //     // border-radius: 2px;
+    //     @include maw(1340){
+    //       width: 160px;
+    //     }
+    //     @include maw-md{
+    //       display: none;
+    //     }
+    //   }
+    //   &::before{
+    //     left: -100%;
+    //   }
+    //   &::after{
+    //     right: 100%;
+    //   }
+    // }
+  }
+
+  &__img{
+    position: absolute;
+    z-index: 2;
+    bottom: -4%;
+    left: 1%;
+    transition: .4s;
+    object-fit: contain;
+    width: 100%;
+    height: 105%;
+
+    @media (max-width: 991px) and (min-height: 1100px){
+      width: 210%;
+      left: -57%;
+    }
+    @media (max-height: 750px) {
+      bottom: -6%;
+    }
+    @media (max-height: 500px) {
+      bottom: -8%;
+
+    }
+
+    @include maw-xxs{
+      // height: 90%;
+      width: 110%;
+      left: -6%;
+    }
+    &.active{
+      transition: .1s;
+      transform: translateY(110%) !important;
+    }
+  }
+  &__menu {
+    position: absolute;
+    z-index: 1;
+    margin:  0 auto;
+    top: 300px;
+    left: 0;
+    right: 0;
+    width: fit-content;
+    height: 0;
+    display: flex;
+    flex-direction: column;
+    overflow: hidden;
+    font-size: 30px;
+    font-weight: 700;
+    text-transform: uppercase;
+    text-align: center;
+    transition: .3s;
+    mix-blend-mode: multiply;
+    // background-color: #f1f;
+    &::-webkit-scrollbar{
+      width: 4px;
+    }
+    &::-webkit-scrollbar-thumb{
+      background: rgba(#000, .5);
+      border-radius: 2px;
+    }
+    scrollbar-width: none;
+    // scrollbar-color: red transparent;
+    @media(hover: none) {
+      mix-blend-mode: initial;
+    }
+    // @media (max-height: 475px) {
+    //   padding-right: 19px;
+    // }
+    @media (max-height: 600px) {
+      top: 230px;
+      overflow: auto;
+    }
+    @media (max-width: 1340px) and (max-height: 600px) {
+      top: 180px;
+    }
+    @media (max-width: 991px) and (max-height: 600px) {
+      top: 270px;
+    }
+    @media (max-width: 575px) and (max-height: 600px) {
+      top: 230px;
+    }
+    @media (max-width: 374px) and (max-height: 600px){
+      top: 210px;
+    }
+    @media (max-width: 320px) and (max-height: 600px){
+      top: 200px;
+    }
+
+    &.active{
+      transition: .2s;
+      height: calc(100% - 290px);
+      padding: 20px;
+      // height: calc(100% - 280px);
+      @media (max-height: 479px) {
+        min-height: 50px;
+      }
+      @media (max-height: 600px) {
+        height: calc(100% - 250px);
+      }
+      @media (max-width: 1340px){
+        height: calc(100% - 230px);
+      }
+      // @include maw-md{
+      //   height: calc(100% - 350px);
+      // }
+      @media (max-width: 991px){
+        height: calc(100% - 320px);
+      }
+      @media (max-width: 575px){
+        height: calc(100% - 280px);
+      }
+      @include maw-xxs {
+        height: calc(100% - 260px);
+      }
+      @include maw-3xs {
+        height: calc(100% - 250px);
+      }
+    }
+
+  }
+  &__menu-list{
+    // flex: 0 1 270px;
+    flex: 0 1 auto;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    // background-color: #ff1;
+    // transition: 3s;
+  }
+  // &__menu-item{
+  //   overflow: visible;
+  // }
+  &__menu-item + &__menu-item{
+    margin-top: 50px;
+    @include maw-xxs {
+      margin-top: 40px;
+    }
+  }
+  &__menu-link{
+    display: block;
+    margin: 0 auto;
+    width: fit-content;
+    color: #fff;
+    text-shadow: 1px 1px 3px $title;
+    transition: .15s ease-out;
+    @media(hover) {
+      &:hover{
+        // color: #ecebe1;
+        color: violet;
+        // transform: translateY(-1px);
+      }
+      &:active {
+        color: darken(violet, 5);
+        // transform: translateY(0);
+        text-shadow: 1px 1px 2px $title;
+      }
+    }
+    @media(hover: none) {
+      &:active {
+        text-shadow: 1px 1px 1px $title;
+        color: darken(#fff, 15);
+      }
+    }
+
+  }
+}
+
+.burger {
+  display: block;
+  position: absolute;
+  z-index: 10;
+  top: 68px;
+  right: 68px;
+  width: 50px;
+  height: 40px;
+  display: flex;
+  align-items: center;
+  transition: .15s;
+  @include maw(1340){
+    width: 40px;
+    height: 30px;
+    top: 52px;
+    right: 40px;
+  }
+  @include maw-s{
+    top: 42px;
+    right: 15px;
+  }
+  @include maw-xxs{
+    top: 36px;
+  }
+  @include maw-3xs{
+    top: 32px;
+    right: 5px;
+  }
+  span {
+    font-size: 0;
+    &::before, &::after{
+      content: '';
+      position: absolute;
+      left: 0;
+      transition: .3s;
+    }
+    &::before{
+      top: 0;
+    }
+    &::after{
+      bottom: 0;
+    }
+  }
+  span, span::before, span::after{
+    width: 100%;
+    height: 4px;
+    border-radius: 2px;
+    transition: .3s cubic-bezier(0.68, -0.55, 0.265, 1.55);
+    background-color: #fff;
+  }
+  &.active span::before {
+    top: 46%;
+    transform: rotate(45deg);
+    @include maw(1340){
+      top: 44%;
+    }
+  }
+  &.active span {
+    background-color: transparent;
+  }
+  &.active span::after {
+    bottom: 46%;
+    transform: rotate(-225deg);
+    @include maw(1340){
+      bottom: 44%;
+    }
+  }
+  // &.active span::before {
+  //   transition: .3s;
+  // }
+  // &.active span {
+  //   transition: .6s;
+  // }
+  // &.active span::after {
+  //   transition: .9s;
+  // }
+}

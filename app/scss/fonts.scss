@@ -1,0 +1,80 @@
+@import url('https://fonts.googleapis.com/css2?family=Fredoka+One&family=Jost:wght@400;700;900&family=Kumbh+Sans:wght@400;700&family=Poppins:wght@400;700;900&family=Questrial&family=Quicksand:wght@500;700&family=Righteous&display=swap');
+
+
+@font-face {
+	font-family: 'Nexa';
+	src: url('../fonts/NexaRegular.eot');
+	src: local('☺'), url('../fonts/NexaRegular.woff') format('woff'),
+  url('../fonts/NexaRegular.ttf') format('truetype'),
+  url('../fonts/NexaRegular.svg') format('svg');
+	font-weight: normal;
+	font-style: normal;
+  font-display: swap;
+}
+
+@font-face {
+  font-family:'Gilroy';
+  src: url('../fonts/Gilroy-Bold.eot');
+  src: url('../fonts/Gilroy-Bold.eot?#iefix') format('embedded-opentype'),
+  url('../fonts/Gilroy-Bold.woff2') format('woff2'),
+  url('../fonts/Gilroy-Bold.woff') format('woff'),
+  url('../fonts/Gilroy-Bold.ttf') format('truetype'),
+  url('../fonts/Gilroy-Bold.svg#Gilroy-Bold') format('svg');
+  font-weight: 700;
+  font-style: normal;
+  font-stretch: normal;
+  font-display: swap;
+  unicode-range: U+0020-00FE;
+}
+
+@font-face {
+  font-family:'AvantGarde';
+  src: url('../fonts/AvantGarde.eot');
+  src: url('../fonts/AvantGarde.eot?#iefix') format('embedded-opentype'),
+  url('../fonts/AvantGarde.woff2') format('woff2'),
+  url('../fonts/AvantGarde.woff') format('woff'),
+  url('../fonts/AvantGarde.svg#AvantGarde') format('svg');
+  font-weight: 400;
+  font-style: normal;
+  font-stretch: normal;
+  font-display: swap;
+  unicode-range: U+0020-00BF;
+}
+
+@font-face {
+  font-family:'AvantGarde';
+  src: url('../fonts/AvantGarde-Bold.eot');
+  src: url('../fonts/AvantGarde-Bold.eot?#iefix') format('embedded-opentype'),
+  url('../fonts/AvantGarde-Bold.woff2') format('woff2'),
+  url('../fonts/AvantGarde-Bold.woff') format('woff'),
+  url('../fonts/AvantGarde-Bold.svg#AvantGarde-Bold') format('svg');
+  font-weight: 700;
+  font-style: normal;
+  font-stretch: normal;
+  font-display: swap;
+  unicode-range: U+0020-02DC;
+}
+
+@font-face {
+	font-family: 'Montserrat';
+	src: url('../fonts/Montserrat-Bold.eot');
+	src: local('☺'), url('../fonts/Montserrat-Bold.woff') format('woff'), url('../fonts/Montserrat-Bold.ttf') format('truetype'), url('../fonts/Montserrat-Bold.svg') format('svg');
+	font-weight: 700;
+	font-style: normal;
+}
+
+@font-face {
+	font-family: 'Montserrat';
+	src: url('../fonts/Montserrat-Regular.eot');
+	src: local('☺'), url('../fonts/Montserrat-Regular.woff') format('woff'), url('../fonts/Montserrat-Regular.ttf') format('truetype'), url('../fonts/Montserrat-Regular.svg') format('svg');
+	font-weight: normal;
+	font-style: normal;
+}
+
+@font-face {
+	font-family: 'kodak';
+	src: url('../fonts/kodakku.eot');
+	src: local('☺'), url('../fonts/kodakku.woff') format('woff'), url('../fonts/kodakku.ttf') format('truetype'), url('../fonts/kodakku.svg') format('svg');
+	font-weight: normal;
+	font-style: normal;
+}

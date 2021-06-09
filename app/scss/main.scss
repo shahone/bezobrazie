@@ -1,0 +1,60 @@
+.main{
+  flex: 1 1 auto;
+  // background: url(../images/main/bg2.jpg) 0% 90%/cover no-repeat;
+  position: relative;
+  transition: .3s;
+  // overflow-x: hidden;
+  // overflow: auto;
+  &__parallax {
+    position: fixed;
+    width: 100vw;
+    height: 100vh;
+    top: 0;
+    left: 0;
+    // margin-bottom: 46px;
+    // position: relative;
+  }
+  &__parallax-bg {
+    // position: absolute;
+    // top: 0;
+    // left: 0;
+    // transform: translate(-50%, -50%);
+    font-size: 0;
+    width: 120%;
+    min-height: 120%;
+    background: url(../images/main/bg2.jpg) 0% 90%/cover no-repeat;
+    transition: .3s;
+  }
+  &.active &__parallax-bg{
+    // filter: blur(5px);
+    // filter: brightness(0.4);
+    // filter: contrast(200%);
+    // filter: drop-shadow(16px 16px 20px blue);
+    filter: grayscale(100%) brightness(0.4);
+    // filter: hue-rotate(-30deg);
+    // filter: invert(75%);
+    // filter: opacity(30%);
+    // filter: saturate(50%);
+    // filter: sepia(100%);
+  }
+}
+
+// .swiper-container {
+//   position: fixed;
+//   // z-index: 1;
+//   top: 0;
+//   left: 0;
+//   width: 100%;
+//   height: 100%;
+// }
+// .swiper-slide{
+//   font-size: 50px;
+//   background-color: #fff;
+//   // width: 200px;
+//   // height: 200px;
+//   display: flex;
+//   align-items: center;
+//   justify-content: center;
+// }
+// // .swiper-pagination{
+// // }

@@ -1,0 +1,106 @@
+
+.works {
+  width: 100%;
+  // min-height: 800px;
+  // background-color: red;
+  position: relative;
+  top: 50px;
+  background-color: #fff;
+  z-index: 1;
+  box-shadow: 0 0 20px 25px #fff;
+  // &::after{
+  //   content: '';
+  //   position: absolute;
+  //   top: -200px;
+  //   left: 0;
+  //   width: 100%;
+  //   height: 200px;
+  //   // background-color: rgba(#000, .5);
+  //   // background: linear-gradient(180deg, transparent, rgba(#fff, .3) 60%, rgba(#fff, .6) 80%, #fff);
+
+  // }
+	&__filter {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding: 50px 0;
+  }
+	&__filter-list {
+    display: flex;
+    flex: 1 1 auto;
+    justify-content: space-between;
+  }
+	&__filter-item {
+    // font-size: 18px;
+    font-weight: 700;
+    text-shadow: 1px 1px 3px $title;
+    color: #fff;
+    text-transform: uppercase;
+    cursor: pointer;
+    border-radius: 5px;
+    // background: rgb(96,9,240);
+    // background: linear-gradient(315deg, #4dccc6 0%, #96e4df 74%);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    transition: .15s;
+    position: relative;
+    @media(hover) {
+      &:hover{
+        color: darken(#fff, 5);
+      }
+    }
+  }
+	&__photos {
+    // width: 100%;
+    display: grid;
+    grid-gap: 2px;
+    grid-template-areas: 'a a a a a b b b b'
+                          'c c c d d d d d d'
+                          'c c c e e e e e e'
+                          'f f f f f f g g g'
+                          'h h h h h i i i i'
+                          'j j j j j i i i i';
+  }
+	&__photo {
+    width: 100%;
+    height: 500px;
+    // &-img{
+    //   object-fit: contain;
+    // }
+    &:nth-child(1) {
+      grid-area: a;
+    }
+    &:nth-child(2) {
+      grid-area: b;
+    }
+    &:nth-child(3) {
+      grid-area: c;
+      height: 100%;
+    }
+    &:nth-child(4) {
+      grid-area: d;
+    }
+    &:nth-child(5) {
+      grid-area: e;
+    }
+    &:nth-child(6) {
+      grid-area: f;
+    }
+    &:nth-child(7) {
+      grid-area: g;
+    }
+    &:nth-child(8) {
+      grid-area: h;
+    }
+    &:nth-child(9) {
+      grid-area: i;
+      min-height: 100%;
+    }
+    &:nth-child(10) {
+      grid-area: j;
+    }
+  }
+	&__photo-img { }
+}
+.container { }

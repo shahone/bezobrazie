@@ -1,0 +1,188 @@
+<!DOCTYPE html>
+<html lang="ru">
+
+<head>
+  <title>Bezobrazie</title>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <!--! адаптив -->
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <!--! адаптив + запретить масштабирование -->
+  <!-- <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=0"> -->
+  <meta name="description" content="Описание сайта до 140 символов">
+  <meta name="keywords" content="Ключевые слова/словосочетания до 20"> <!-- yandex -->
+  <meta name="author" content="Ruslan Validi">
+  <meta name="copyright" content="владелец авторских прав">
+  <meta name="address" content="адрес владельца/фирмы">
+  <meta name="google" content="notranslate">
+  <!--! запрет индексации полностью -->
+  <meta name="robots" content="none">
+  <!--! запрет индексации картинок и ссылок -->
+  <!-- <meta name="robots" content="noimageindex, nofollow"> -->
+  <!--! запретить номера-ссылки -->
+  <meta name="format-detection" content="telephone-no">
+  <!--! обновление страницы при ошибке (через сколько и куда) -->
+  <!-- <meta http-equiv="refresh" content="0; url="> -->
+  <!--! favicon -->
+  <!-- <link rel="apple-touch-icon" sizes="180x180" href="favicon/apple-touch-icon.png">
+  <link rel="icon" type="image/png" sizes="32x32" href="favicon/favicon-32x32.png">
+  <link rel="icon" type="image/png" sizes="16x16" href="favicon/favicon-16x16.png">
+  <link rel="manifest" href="favicon/site.webmanifest">
+  <link rel="mask-icon" href="favicon/safari-pinned-tab.svg" color="#0e1d28">
+  <meta name="msapplication-TileColor" content="#0e1d28">
+  <meta name="theme-color" content="#ff0000"> -->
+  <!-- ! своя иконка -->
+  <!-- <link rel="shortcut icon" href="" type="image/png"> -->
+  <link rel="stylesheet" href="css/style.min.css">
+</head>
+
+<body ontouchstart="">
+  <div class="wrapper">
+    <header class="header" id="home">
+      <div class="container">
+        <div class="header__title-block">
+          <div class="header__title">
+            <p class="header__title-left">
+              <span>G</span><span>e</span><span>r</span><span>m</span><span>a</span><span>n</span>
+            </p>
+            <p class="header__title-right">
+              <span>P</span><span>r</span><span>o</span><span>k</span><span>o</span><span>p</span><span>'</span><span>y</span><span>e</span><span>v</span>
+              <!--  style="color: red" -->
+            </p>
+            <img class="header__img" src="images/main/g4.png" alt="img" data-speed="100">
+            <div class="swiper-container header__subtitle">
+              <div class="swiper-wrapper">
+                <div class="swiper-slide">photography</div>
+                <div class="swiper-slide">about</div>
+                <div class="swiper-slide">works</div>
+                <div class="swiper-slide">services</div>
+              </div>
+            </div>
+          </div>
+        </div>
+        <div class="header__menu">
+          <ul class="header__menu-list">
+            <li class="header__menu-item"><a class="header__menu-link" href="/">мои работы</a></li>
+            <li class="header__menu-item"><a class="header__menu-link" href="/">услуги</a></li>
+            <li class="header__menu-item"><a class="header__menu-link" href="/">клиенты</a></li>
+            <li class="header__menu-item"><a class="header__menu-link" href="/">обо мне</a></li>
+          </ul>
+        </div>
+        <button class="burger">
+          <span>span</span>
+        </button>
+      </div>
+    </header>
+
+    <main class="main">
+      <div class="main__parallax">
+        <div class="main__parallax-bg" data-speed="300">parallax</div>
+
+      </div>
+      <!-- <div class="main__slider swiper-container">
+
+        <div class="swiper-wrapper">
+
+          <div class="swiper-slide">Slide 1</div>
+          <div class="swiper-slide">Slide 2</div>
+          <div class="swiper-slide">Slide 3</div>
+        </div>
+
+        <div class="swiper-pagination"></div>
+
+
+        <div class="swiper-button-prev"></div>
+        <div class="swiper-button-next"></div>
+
+
+        <div class="swiper-scrollbar"></div>
+      </div> -->
+
+
+      <!-- <div class="swiper-container">
+        <div class="parallax-bg" style="background-image:url(images/main/slider-bg.jpg)" data-swiper-parallax="-23%">
+        </div>
+        <div class="swiper-wrapper">
+          <div class="swiper-slide">
+            <div class="title" data-swiper-parallax="-100" data-swiper-parallax-duration="1200">Slide 1</div>
+            <div class="subtitle" data-swiper-parallax="200" data-swiper-parallax-duration="1200">Subtitle</div>
+            <div class="text" data-swiper-parallax="-100" data-swiper-parallax-duration="600">
+              <p>Lorem ipsum dolor sit amet</p>
+            </div>
+            <div data-swiper-parallax-opacity="0.1" data-swiper-parallax-duration="3000">I will change opacity</div>
+            <div class="myscale" data-swiper-parallax-scale="3">I will change scale</div>
+          </div>
+        </div>
+      </div> -->
+      <section class="about">
+        <div class="film">
+          <img class="film-img" src="images/about/film.png" alt="film">
+        </div>
+        <h2 class="about__title">обо мне</h2>
+        <div class="container">
+          <div class="about__video-block">
+            <video class="about__video" poster="images/about/videoscreen2.jpg">
+              <!-- controls controlsList="nodownload" -->
+              <source src="images/about/german.mp4">
+              <source src="images/about/german.webm">
+            </video>
+            <div class="about__play-wrapper">
+              <button class="play">
+                play
+              </button>
+            </div>
+          </div>
+          <div class="about__text">Привет, я Герман. Чинный суперфотогаф. И да, детка, настало твоё время. Сегодня я
+            сниму тебя!
+            Далеко-далеко за словесными горами
+            в стране
+            гласных и согласных живут рыбные тексты. Букв переулка рыбными толку пунктуация сих залетают силуэт встретил
+            взгляд скатился.
+          </div>
+        </div>
+
+      </section>
+      <!-- <section class="works" id="works">
+        <div class="container">
+          <div class="works__filter">
+            <ul class="works__filter-list">
+              <li class="works__filter-item" data-filter="wedding">свадьбы</li>
+              <li class="works__filter-item" data-filter="events">мероприятия</li>
+              <li class="works__filter-item" data-filter="studio">студия</li>
+              <li class="works__filter-item" data-filter="reportage">репортаж</li>
+              <li class="works__filter-item" data-filter="commerce">коммерция</li>
+            </ul>
+          </div>
+        </div>
+        <div class="works__photos">
+          <div class="works__photo works__photo-1"><img class="works__photo-img" src="images/main/works/img1.jpg"
+              alt="photo"></div>
+          <div class="works__photo works__photo-2"><img class="works__photo-img" src="images/main/works/img3.jpg"
+              alt="photo"></div>
+          <div class="works__photo works__photo-3"><img class="works__photo-img" src="images/main/works/img2.jpg"
+              alt="photo"></div>
+          <div class="works__photo works__photo-4"><img class="works__photo-img" src="images/main/works/img4.jpg"
+              alt="photo"></div>
+          <div class="works__photo works__photo-5"><img class="works__photo-img" src="images/main/works/img5.jpg"
+              alt="photo"></div>
+          <div class="works__photo works__photo-6"><img class="works__photo-img" src="images/main/works/img6.jpg"
+              alt="photo"></div>
+          <div class="works__photo works__photo-7"><img class="works__photo-img" src="images/main/works/img7.jpg"
+              alt="photo"></div>
+          <div class="works__photo works__photo-8"><img class="works__photo-img" src="images/main/works/img8.jpg"
+              alt="photo"></div>
+          <div class="works__photo works__photo-9"><img class="works__photo-img" src="images/main/works/img10.jpg"
+              alt="photo"></div>
+          <div class="works__photo works__photo-10"><img class="works__photo-img" src="images/main/works/img9.jpg"
+              alt="photo"></div>
+        </div>
+      </section> -->
+    </main>
+    <!-- <footer class="footer">
+      footer
+    </footer> -->
+  </div>
+  <script src="js/main.min.js" defer></script>
+</body>
+
+</html>
