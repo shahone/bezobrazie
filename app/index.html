@@ -35,30 +35,28 @@
   <!-- <link rel="shortcut icon" href="" type="image/png"> -->
   <link rel="stylesheet" href="css/style.min.css">
 </head>
+<!-- ontouchstart="" -->
 
-<body ontouchstart="">
+<body>
   <div class="wrapper">
     <header class="header" id="home">
       <div class="container">
-        <div class="header__title-block">
-          <div class="header__title">
-            <p class="header__title-left">
-              <span>G</span><span>e</span><span>r</span><span>m</span><span>a</span><span>n</span>
-            </p>
-            <p class="header__title-right">
-              <span>P</span><span>r</span><span>o</span><span>k</span><span>o</span><span>p</span><span>'</span><span>y</span><span>e</span><span>v</span>
-              <!--  style="color: red" -->
-            </p>
-            <img class="header__img" src="images/main/g4.png" alt="img" data-speed="100">
-            <div class="swiper-container header__subtitle">
-              <div class="swiper-wrapper">
-                <div class="swiper-slide">photography</div>
-                <div class="swiper-slide">about</div>
-                <div class="swiper-slide">works</div>
-                <div class="swiper-slide">services</div>
-              </div>
+        <div class="header__title">
+          <div class="header__title-left">
+            <span>G</span><span>e</span><span>r</span><span>m</span><span>a</span><span>n</span>
+          </div>
+          <div class="header__title-right">
+            <span>P</span><span>r</span><span>o</span><span>k</span><span>o</span><span>p</span><span>'</span><span>y</span><span>e</span><span>v</span>
+          </div>
+          <div class="header__subtitle swiper-container">
+            <div class="swiper-wrapper">
+              <div class="swiper-slide">photography</div>
+              <div class="swiper-slide">about</div>
+              <div class="swiper-slide">works</div>
+              <div class="swiper-slide">services</div>
             </div>
           </div>
+          <img class="header__img" src="images/main/g4.png" alt="img" data-speed="100">
         </div>
         <div class="header__menu">
           <ul class="header__menu-list">
@@ -68,16 +66,15 @@
             <li class="header__menu-item"><a class="header__menu-link" href="/">обо мне</a></li>
           </ul>
         </div>
-        <button class="burger">
-          <span>span</span>
-        </button>
       </div>
+      <button class="burger">
+        <span>span</span>
+      </button>
     </header>
 
     <main class="main">
       <div class="main__parallax">
         <div class="main__parallax-bg" data-speed="300">parallax</div>
-
       </div>
       <!-- <div class="main__slider swiper-container">
 
@@ -114,15 +111,13 @@
           </div>
         </div>
       </div> -->
-      <section class="about">
+      <!-- <section class="about">
         <div class="film">
           <img class="film-img" src="images/about/film.png" alt="film">
         </div>
-        <h2 class="about__title">обо мне</h2>
         <div class="container">
           <div class="about__video-block">
             <video class="about__video" poster="images/about/videoscreen2.jpg">
-              <!-- controls controlsList="nodownload" -->
               <source src="images/about/german.mp4">
               <source src="images/about/german.webm">
             </video>
@@ -140,43 +135,85 @@
             взгляд скатился.
           </div>
         </div>
-
-      </section>
-      <!-- <section class="works" id="works">
-        <div class="container">
-          <div class="works__filter">
-            <ul class="works__filter-list">
-              <li class="works__filter-item" data-filter="wedding">свадьбы</li>
-              <li class="works__filter-item" data-filter="events">мероприятия</li>
-              <li class="works__filter-item" data-filter="studio">студия</li>
-              <li class="works__filter-item" data-filter="reportage">репортаж</li>
-              <li class="works__filter-item" data-filter="commerce">коммерция</li>
-            </ul>
-          </div>
-        </div>
-        <div class="works__photos">
-          <div class="works__photo works__photo-1"><img class="works__photo-img" src="images/main/works/img1.jpg"
-              alt="photo"></div>
-          <div class="works__photo works__photo-2"><img class="works__photo-img" src="images/main/works/img3.jpg"
-              alt="photo"></div>
-          <div class="works__photo works__photo-3"><img class="works__photo-img" src="images/main/works/img2.jpg"
-              alt="photo"></div>
-          <div class="works__photo works__photo-4"><img class="works__photo-img" src="images/main/works/img4.jpg"
-              alt="photo"></div>
-          <div class="works__photo works__photo-5"><img class="works__photo-img" src="images/main/works/img5.jpg"
-              alt="photo"></div>
-          <div class="works__photo works__photo-6"><img class="works__photo-img" src="images/main/works/img6.jpg"
-              alt="photo"></div>
-          <div class="works__photo works__photo-7"><img class="works__photo-img" src="images/main/works/img7.jpg"
-              alt="photo"></div>
-          <div class="works__photo works__photo-8"><img class="works__photo-img" src="images/main/works/img8.jpg"
-              alt="photo"></div>
-          <div class="works__photo works__photo-9"><img class="works__photo-img" src="images/main/works/img10.jpg"
-              alt="photo"></div>
-          <div class="works__photo works__photo-10"><img class="works__photo-img" src="images/main/works/img9.jpg"
-              alt="photo"></div>
+        <div class="film film--bottom">
+          <img class="film-img" src="images/about/film.png" alt="film">
         </div>
       </section> -->
+      <div class="film">
+        <div class="film__tape-wrapper">
+          <div class="film__tape">
+            <a class="film__photo" href="#">
+              <img src="images/works/img1.jpg" alt="photo">
+            </a>
+            <a class="film__photo" href="#">
+              <img src="images/works/img2.jpg" alt="photo">
+            </a>
+            <a class="film__photo" href="#">
+              <img src="images/works/img3.jpg" alt="photo">
+            </a>
+            <a class="film__photo" href="#">
+              <img src="images/works/img4.jpg" alt="photo">
+            </a>
+            <a class="film__photo" href="#">
+              <img src="images/works/img5.jpg" alt="photo">
+            </a>
+            <a class="film__photo" href="#">
+              <img src="images/works/img6.jpg" alt="photo">
+            </a>
+            <a class="film__photo" href="#">
+              <img src="images/works/img7.jpg" alt="photo">
+            </a>
+            <a class="film__photo" href="#">
+              <img src="images/works/img8.jpg" alt="photo">
+            </a>
+            <a class="film__photo" href="#">
+              <img src="images/works/img9.jpg" alt="photo">
+            </a>
+            <a class="film__photo" href="#">
+              <img src="images/works/img10.jpg" alt="photo">
+            </a>
+            <a class="film__photo" href="#">
+              <img src="images/works/img11.jpg" alt="photo">
+            </a>
+            <a class="film__photo" href="#">
+              <img src="images/works/img12.jpg" alt="photo">
+            </a>
+            <a class="film__photo" href="#">
+              <img src="images/works/img13.jpeg" alt="photo">
+            </a>
+            <a class="film__photo" href="#">
+              <img src="images/works/img14.jfif" alt="photo">
+            </a>
+            <a class="film__photo" href="#">
+              <img src="images/works/img15.jpeg" alt="photo">
+            </a>
+            <a class="film__photo" href="#">
+              <img src="images/works/img16.png" alt="photo">
+            </a>
+            <a class="film__photo" href="#">
+              <img src="images/works/img17.jpg" alt="photo">
+            </a>
+            <a class="film__photo" href="#">
+              <img src="images/works/img18.jpg" alt="photo">
+            </a>
+            <a class="film__photo" href="#">
+              <img src="images/works/img19.jpg" alt="photo">
+            </a>
+            <a class="film__photo" href="#">
+              <img src="images/works/img20.jpeg" alt="photo">
+            </a>
+            <a class="film__photo" href="#">
+              <img src="images/works/img21.jpg" alt="photo">
+            </a>
+            <a class="film__photo" href="#">
+              <img src="images/works/img22.jpg" alt="photo">
+            </a>
+          </div>
+        </div>
+        <div class="film__box">
+          <img src="images/works/filmbox.png" alt="filmbox">
+        </div>
+      </div>
     </main>
     <!-- <footer class="footer">
       footer

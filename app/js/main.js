@@ -197,99 +197,83 @@ document.addEventListener('DOMContentLoaded', function () {
   //   },
   // });
 
-  const swiper2 = new Swiper('.header__subtitle', {
-    // parallax: true,
-    direction: 'vertical',
-    loop: true,
-  });
+  // const swiper2 = new Swiper('.header__subtitle', {
+  //   // parallax: true,
+  //   direction: 'vertical',
+  //   loop: true,
+  // });
 
-  const parallax = (event) => {
-    let layers = this.querySelectorAll('[data-speed]');
-    for (let layer of layers) {
-      // let layerSpeed = layer.dataset.speed; то же что и...
-      let layerSpeed = layer.getAttribute('data-speed');
-      if (layer.classList.contains('header__img') && !layer.classList.contains('active')) {
-        layer.style.transform = `translate(-${event.clientX / layerSpeed}px, -${event.clientY / layerSpeed}px)`;
-      }
-      if (layer.classList.contains('main__parallax-bg') && !main.classList.contains('active')) {
-        layer.style.transform = `translate(-${event.clientX / layerSpeed}px, -${event.clientY / layerSpeed}px)`;
-      }
-
-
+  // const parallax = (event) => {
+  //   let layers = this.querySelectorAll('[data-speed]');
+  //   for (let layer of layers) {
+  //     // let layerSpeed = layer.dataset.speed; то же что и...
+  //     let layerSpeed = layer.getAttribute('data-speed');
+  //     if (layer.classList.contains('header__img') && !layer.classList.contains('active')) {
+  //       layer.style.transform = `translate(-${event.clientX / layerSpeed}px, -${event.clientY / layerSpeed}px)`;
+  //     }
+  //     if (layer.classList.contains('main__parallax-bg') && !main.classList.contains('active')) {
+  //       layer.style.transform = `translate(-${event.clientX / layerSpeed}px, -${event.clientY / layerSpeed}px)`;
+  //     }
 
 
-    }
-  };
-  const parallaxSection = document.querySelector('.header');
-  parallaxSection.addEventListener('mousemove', parallax);
-  // document.addEventListener('click', (e) => console.log(e.target));
+
+
+  //   }
+  // };
+  // const parallaxSection = document.querySelector('.header');
+  // parallaxSection.addEventListener('mousemove', parallax);
 
   //! play
 
-  const playButton = document.querySelector('.play');
-  const video = document.querySelector('.about__video');
-  let play = false;
+  // const playButton = document.querySelector('.play');
+  // const video = document.querySelector('.about__video');
+  // let play = false;
 
-  const playVideo = () => {
-    if (play === false) {
-      playButton.classList.add('paused');
-      playButton.parentElement.classList.add('played');
-      video.play();
-      play = true;
-    } else {
-      playButton.classList.remove('paused');
-      playButton.parentElement.classList.remove('played');
-      video.pause();
-      play = false;
-    }
+  // const playVideo = () => {
+  //   if (play === false) {
+  //     playButton.classList.add('paused');
+  //     playButton.parentElement.classList.add('played');
+  //     video.play();
+  //     play = true;
+  //   } else {
+  //     playButton.classList.remove('paused');
+  //     playButton.parentElement.classList.remove('played');
+  //     video.pause();
+  //     play = false;
+  //   }
+  // };
+  // playButton.addEventListener('click', playVideo);
+
+  // video.addEventListener('ended', () => {
+  //   video.load();
+  //   playVideo();
+  // });
+
+  //! drag
+
+  const tape = document.querySelector('.film__tape-wrapper');
+  tape.onmousedown = () => {
+    let pageX = 0;
+    tape.style.cursor = 'grabbing';
+    document.onmousemove = e => {
+      if (pageX !== 0) {
+        tape.scrollLeft = tape.scrollLeft + (pageX - e.pageX);
+      }
+      pageX = e.pageX;
+    };
+
+    // заканчиваем выполнение событий
+    tape.onmouseup = () => {
+      document.onmousemove = null;
+      tape.onmouseup = null;
+      tape.style.cursor = 'grab';
+    };
+
+    // отменяем браузерный drag
+    tape.ondragstart = () => {
+      return false;
+    };
   };
-  playButton.addEventListener('click', playVideo);
-
-  video.addEventListener('ended', () => {
-    video.load();
-    playVideo();
-  });
-
-  //! section name
-  const changeSectionName = () => {
-    const sectionList = document.querySelector('.header__subtitle'),
-      sectionItems = document.querySelectorAll('.header__subtitle-item');
-
-    let index = 0;
-
-    function showSlide(n) {
-      if (n > sectionItems.length) {
-        index = 0;
-        // sectionItems.forEach(item => {
-        //   item.style.display = 'none';
-        //   item.classList.remove('out');
-
-        // });
-        sectionItems[index].style.display = 'block';
-      }
-
-      if (n < 0) {
-        index = sectionItems.length;
-      }
-
-      sectionItems.forEach(item => {
-        item.style.display = 'none';
-        item.classList.remove('out');
-      });
-      sectionItems[index].style.display = 'block';
-
-    }
-    showSlide(index);
-
-    sectionList.addEventListener('click', (e) => {
-      if (e.target) {
-        sectionItems[index].classList.add('out');
-        showSlide(++index);
-      }
-    });
-
-  };
-  changeSectionName();
 
 
 });

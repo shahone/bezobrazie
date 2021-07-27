@@ -1,10 +1,8 @@
 .main{
-  flex: 1 1 auto;
-  // background: url(../images/main/bg2.jpg) 0% 90%/cover no-repeat;
+  min-width: 100%;
   position: relative;
   transition: .3s;
-  // overflow-x: hidden;
-  // overflow: auto;
+  background: url(../images/canvas/main.svg), blueviolet;
   &__parallax {
     position: fixed;
     width: 100vw;

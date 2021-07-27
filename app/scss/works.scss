@@ -1,106 +1,104 @@
-
-.works {
-  width: 100%;
-  // min-height: 800px;
-  // background-color: red;
+.film{
   position: relative;
-  top: 50px;
-  background-color: #fff;
   z-index: 1;
-  box-shadow: 0 0 20px 25px #fff;
-  // &::after{
-  //   content: '';
-  //   position: absolute;
-  //   top: -200px;
-  //   left: 0;
-  //   width: 100%;
-  //   height: 200px;
-  //   // background-color: rgba(#000, .5);
-  //   // background: linear-gradient(180deg, transparent, rgba(#fff, .3) 60%, rgba(#fff, .6) 80%, #fff);
-
+  margin-top: -2%;
+  display: flex;
+  align-items: center;
+  // background-color: #fff;
+  // height: 430px;
+  height: 340px;
+  // background: #fff;
+  // @media (max-width: 991px) and (max-height: 820px){
+  //   margin-top: -3%;
   // }
-	&__filter {
+  @include maw-sm {
+    height: 250px;
+  }
+  @media (max-width: 575px) and (max-height: 767px){
+    margin-top: -6%;
+  }
+  &__tape-wrapper{
+    width: 100vw;
+    height: 380px;
     display: flex;
     align-items: center;
-    justify-content: center;
-    padding: 50px 0;
+    overflow: auto;
+    cursor: grab;
+    // background-color: #f1f;
+    &::-webkit-scrollbar{
+      // background: transparent;
+      height: 0;
+    }
   }
-	&__filter-list {
-    display: flex;
-    flex: 1 1 auto;
-    justify-content: space-between;
-  }
-	&__filter-item {
-    // font-size: 18px;
-    font-weight: 700;
-    text-shadow: 1px 1px 3px $title;
-    color: #fff;
-    text-transform: uppercase;
-    cursor: pointer;
-    border-radius: 5px;
-    // background: rgb(96,9,240);
-    // background: linear-gradient(315deg, #4dccc6 0%, #96e4df 74%);
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    transition: .15s;
+  &__tape{
+    min-width: 8260px;
+    height: 362px;
     position: relative;
-    @media(hover) {
-      &:hover{
-        color: darken(#fff, 5);
-      }
+    display: flex;
+    align-items: center;
+    padding-left: 265px;
+    overflow: hidden;
+    left: 0%;
+    @include maw-sm{
+      // left: 70%;
+      left: -15%;
+      min-width: 6000px;
+      height: 250px;
+      padding-left: 193px;
     }
-  }
-	&__photos {
-    // width: 100%;
-    display: grid;
-    grid-gap: 2px;
-    grid-template-areas: 'a a a a a b b b b'
-                          'c c c d d d d d d'
-                          'c c c e e e e e e'
-                          'f f f f f f g g g'
-                          'h h h h h i i i i'
-                          'j j j j j i i i i';
-  }
-	&__photo {
-    width: 100%;
-    height: 500px;
-    // &-img{
-    //   object-fit: contain;
-    // }
-    &:nth-child(1) {
-      grid-area: a;
-    }
-    &:nth-child(2) {
-      grid-area: b;
-    }
-    &:nth-child(3) {
-      grid-area: c;
+    &::after{
+      content: '';
+      position: absolute;
+      top: 0;
+      left: 0;
+      width: 100%;
       height: 100%;
-    }
-    &:nth-child(4) {
-      grid-area: d;
-    }
-    &:nth-child(5) {
-      grid-area: e;
-    }
-    &:nth-child(6) {
-      grid-area: f;
-    }
-    &:nth-child(7) {
-      grid-area: g;
-    }
-    &:nth-child(8) {
-      grid-area: h;
-    }
-    &:nth-child(9) {
-      grid-area: i;
-      min-height: 100%;
-    }
-    &:nth-child(10) {
-      grid-area: j;
+      background: url(../images/about/film/film-long2.png) left/contain no-repeat;
+      filter: drop-shadow(0 0 5px rgba(#000, 0.5));
     }
   }
-	&__photo-img { }
+  &__photo{
+    min-width: 372px;
+    height: 240px;
+    @include maw-sm{
+      min-width: 270px;
+      height: 175px;
+    }
+  }
+  &__box{
+    // content: '';
+    position: relative;
+    z-index: 1;
+    right: 0;
+    // top: 0;
+    // top: -25%;
+    top: -35px;
+    width: 300px;
+    height: 500px;
+    overflow: hidden;
+    margin-left: -20px;
+    filter: drop-shadow(0 0 5px #000);
+    pointer-events: none;
+    @include maw-sm{
+      top: -25px;
+      right: -70px;
+      margin-left: -120px;
+      width: 210px;
+      height: 370px;
+      // background-color: red;
+    }
+    // @include maw-xs{
+    //   right: -140px;
+    //   margin-left: -165px;
+    // }
+    img{
+      object-fit: contain;
+    }
+    // @include maw-sm{
+    //   right: -180px;
+    // }
+    // @include maw-s{
+    //   right: -220px;
+    // }
+  }
 }
-.container { }
